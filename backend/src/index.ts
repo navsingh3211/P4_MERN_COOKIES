@@ -35,8 +35,8 @@ app.get("/user", (req, res) => {
 });
 
 app.post("/logout", (req, res) => {
-  // res.clearCookie("_Secure_next_auth");
-  res.cookie("_Secure_next_auth", "");
+  res.clearCookie("_Secure_next_auth");
+  // res.cookie("_Secure_next_auth", "");
   res.json({
       message: "Logged out!"
   })
