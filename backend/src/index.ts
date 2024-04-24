@@ -42,6 +42,10 @@ app.post("/logout", (req, res) => {
   })
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../src/index.html"))
+})
+
 app.listen(8085,()=>{
   console.log('our app is listening on 8085 port');
   
